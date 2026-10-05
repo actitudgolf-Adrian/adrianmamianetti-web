@@ -44,30 +44,20 @@
           <span class="aporte-flag">🇦🇷</span>
           <div>
             <div class="aporte-title">Dejá tu aporte desde Argentina</div>
-            <div class="aporte-sub">en pesos</div>
+            <div class="aporte-sub">en pesos — alias: nelvy.arna</div>
           </div>
         </div>
-        <a href="#" class="btn-primary aporte-btn">Aportar</a>
+        <a href="#" class="btn-primary aporte-btn" onclick="copiarAlias(event)">Copiar alias</a>
       </div>
       <div class="aporte-option">
         <div class="aporte-label">
           <span class="aporte-flag">🌍</span>
           <div>
             <div class="aporte-title">Dejá tu aporte desde otro lado del mundo</div>
-            <div class="aporte-sub">en dólares</div>
+            <div class="aporte-sub">en dólares, por PayPal</div>
           </div>
         </div>
-        <a href="#" class="btn-primary aporte-btn">Aportar</a>
-      </div>
-      <div class="aporte-option">
-        <div class="aporte-label">
-          <span class="aporte-flag">🏦</span>
-          <div>
-            <div class="aporte-title">Colaboración por banco tradicional</div>
-            <div class="aporte-sub">alias: cyro.vitto</div>
-          </div>
-        </div>
-        <a href="#" class="btn-primary aporte-btn">Copiar alias</a>
+        <a href="https://paypal.me/adrianmamianetti" target="_blank" rel="noopener" class="btn-primary aporte-btn">Aportar</a>
       </div>
     </div>
   </div>
@@ -76,6 +66,25 @@
 <footer>
   © Adrián Mamianetti — San Miguel del Monte, Buenos Aires · FiloSer / FiloSer Deportivo / Idilio Temple
 </footer>
+
+
+<script>
+function copiarAlias(e){
+  e.preventDefault();
+  var btn = e.currentTarget;
+  var alias = 'nelvy.arna';
+  var ok = function(){
+    var original = btn.textContent;
+    btn.textContent = '¡Copiado!';
+    setTimeout(function(){ btn.textContent = original; }, 2000);
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(alias).then(ok, function(){ window.prompt('Copiá el alias:', alias); });
+  } else {
+    window.prompt('Copiá el alias:', alias);
+  }
+}
+</script>
 
 </body>
 </html>
