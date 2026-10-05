@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Idilio Temple — Poemas | Adrián Mamianetti</title>
 <link rel="stylesheet" href="../styles.css">
+<style>
+  .invitacion-wrap{max-width:760px; margin:0 auto; padding:4px 24px 22px;}
+  .invitacion{font-family:'Iowan Old Style',Georgia,serif; font-style:italic; color:var(--verde-fairway); line-height:1.7; border-left:3px solid var(--terracota); padding-left:18px;}
+  .filtros{max-width:760px; margin:0 auto; padding:0 24px 18px; display:flex; flex-wrap:wrap; gap:8px;}
+  .filtro{border:1px solid var(--linea); background:var(--pergamino-alto); color:var(--verde-fairway); padding:7px 14px; font-size:0.85rem; cursor:pointer; border-radius:2px; font-family:inherit;}
+  .filtro:hover{border-color:var(--terracota);}
+  .filtro.activo{background:var(--verde-fairway); color:var(--pergamino-alto); border-color:var(--verde-fairway);}
+</style>
 </head>
 <body>
 <header>
@@ -24,17 +32,105 @@
   <h1>Idilio Temple <span class="phi-mark">φ</span></h1>
   <p class="page-meta">Bienvenido, Andante de la vida — a emocionar... pensar... sentir... imaginar...</p>
 </div>
-<div class="article-list">
-  <div class="article-row">
-    <a href="entre-sierras.html">Entre sierras</a>
-    <span class="article-tag">Poema</span>
-  </div>
-  <div class="article-row">
-    <a href="esperanza-en-la-ruta.html">Esperanza en la ruta</a>
-    <span class="article-tag">Poema</span>
-  </div>
-  <!-- Cada poema nuevo: copiá este bloque y cambiá el link + título -->
+<div class="invitacion-wrap">
+  <p class="invitacion">Te invito a mi mundo por unos minutos —con sus virtudes y defectos, como el de cada uno—. Un espacio para que, si algo te resuena, te lo lleves. Y si no, no pasa nada: la invitación estuvo abierta igual.</p>
 </div>
+<div class="filtros" id="filtros">
+  <button type="button" class="filtro activo" data-cat="todas" aria-pressed="true">Todas (16)</button>
+  <button type="button" class="filtro" data-cat="Naturaleza" aria-pressed="false">Naturaleza (5)</button>
+  <button type="button" class="filtro" data-cat="Amor y afectos" aria-pressed="false">Amor y afectos (6)</button>
+  <button type="button" class="filtro" data-cat="Argentinidad" aria-pressed="false">Argentinidad (1)</button>
+  <button type="button" class="filtro" data-cat="Infancia y barrio" aria-pressed="false">Infancia y barrio (2)</button>
+  <button type="button" class="filtro" data-cat="Filosofía de vida" aria-pressed="false">Filosofía de vida (1)</button>
+  <button type="button" class="filtro" data-cat="Identidad y escritura" aria-pressed="false">Identidad y escritura (1)</button>
+</div>
+<div class="article-list" id="lista">
+  <div class="article-row" data-cat="Naturaleza">
+    <a href="esperanza-en-la-ruta.html">Esperanza en la ruta</a>
+    <span class="article-tag">Naturaleza</span>
+  </div>
+  <div class="article-row" data-cat="Naturaleza">
+    <a href="entre-sierras.html">Entre sierras</a>
+    <span class="article-tag">Naturaleza</span>
+  </div>
+  <div class="article-row" data-cat="Naturaleza">
+    <a href="manana-invernal.html">Mañana invernal</a>
+    <span class="article-tag">Naturaleza</span>
+  </div>
+  <div class="article-row" data-cat="Naturaleza">
+    <a href="pajaros.html">Pájaros</a>
+    <span class="article-tag">Naturaleza</span>
+  </div>
+  <div class="article-row" data-cat="Amor y afectos">
+    <a href="tras-de-mi.html">Tras de mí</a>
+    <span class="article-tag">Amor y afectos</span>
+  </div>
+  <div class="article-row" data-cat="Argentinidad">
+    <a href="gauchos-en-bifurcada.html">Gauchos en bifurcada</a>
+    <span class="article-tag">Argentinidad</span>
+  </div>
+  <div class="article-row" data-cat="Naturaleza">
+    <a href="sonrisas-campestres.html">Sonrisas campestres</a>
+    <span class="article-tag">Naturaleza</span>
+  </div>
+  <div class="article-row" data-cat="Amor y afectos">
+    <a href="marina.html">Marina</a>
+    <span class="article-tag">Amor y afectos</span>
+  </div>
+  <div class="article-row" data-cat="Amor y afectos">
+    <a href="madre.html">Madre</a>
+    <span class="article-tag">Amor y afectos</span>
+  </div>
+  <div class="article-row" data-cat="Amor y afectos">
+    <a href="un-viejo-como-vos.html">Un viejo como vos</a>
+    <span class="article-tag">Amor y afectos</span>
+  </div>
+  <div class="article-row" data-cat="Amor y afectos">
+    <a href="quiero-ser.html">Quiero ser…</a>
+    <span class="article-tag">Amor y afectos</span>
+  </div>
+  <div class="article-row" data-cat="Amor y afectos">
+    <a href="amaneciendo-por-el-ventanal.html">Amaneciendo por el ventanal</a>
+    <span class="article-tag">Amor y afectos</span>
+  </div>
+  <div class="article-row" data-cat="Infancia y barrio">
+    <a href="fulbito-empedrado.html">Fulbito empedrado</a>
+    <span class="article-tag">Infancia y barrio</span>
+  </div>
+  <div class="article-row" data-cat="Infancia y barrio">
+    <a href="latidos.html">Latidos</a>
+    <span class="article-tag">Infancia y barrio</span>
+  </div>
+  <div class="article-row" data-cat="Filosofía de vida">
+    <a href="hoy-y-siempre.html">Hoy y…¿siempre?</a>
+    <span class="article-tag">Filosofía de vida</span>
+  </div>
+  <div class="article-row" data-cat="Identidad y escritura">
+    <a href="al-papel.html">Al papel</a>
+    <span class="article-tag">Identidad y escritura</span>
+  </div>
+  <!-- Cada poema nuevo: copiá un bloque, cambiá el link, el título y la categoría (en data-cat y en la etiqueta). Si la categoría es nueva, sumá su botón arriba. -->
+</div>
+<script>
+(function(){
+  var botones = document.querySelectorAll('.filtro');
+  var filas = document.querySelectorAll('#lista .article-row');
+  function filtrar(cat){
+    for (var i = 0; i < filas.length; i++) {
+      var ok = (cat === 'todas') || (filas[i].getAttribute('data-cat') === cat);
+      filas[i].style.display = ok ? '' : 'none';
+    }
+    for (var j = 0; j < botones.length; j++) {
+      var activo = botones[j].getAttribute('data-cat') === cat;
+      botones[j].classList.toggle('activo', activo);
+      botones[j].setAttribute('aria-pressed', activo ? 'true' : 'false');
+    }
+  }
+  for (var k = 0; k < botones.length; k++) {
+    botones[k].addEventListener('click', function(){ filtrar(this.getAttribute('data-cat')); });
+  }
+})();
+</script>
 <footer>
   © Adrián Mamianetti — San Miguel del Monte, Buenos Aires · FiloSer / FiloSer Deportivo / Idilio Temple
 </footer>
